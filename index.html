@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:700,400,200|Merriweather&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <header class="header">
+    <nav class="menu header__menu">
+      <div class="burger menu__burger">
+        <div class="burger__layer"></div>
+      </div>
+      <ul class="menu__body">
+        <li class="menu__item"><a href="#secition1" class="menu__link">Что дает курс</a></li>
+        <li class="menu__item"><a href="#secition2" class="menu__link">Программа</a></li>
+        <li class="menu__item menu--active"><a href="#secition3" class="menu__link">Расписание</a></li>
+        <li class="menu__item"><a href="#secition4" class="menu__link">Тарифы</a></li>
+        <li class="menu__item"><a href="#secition5" class="menu__link">О ведущей</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="content">
+    <header class="hero">
+      <hgroup class="hero__head">
+        <h1 class="hero__title"><span class="hero__fragment fragment1">Кто я, </span><span
+            class="hero__fragment fragment2">о чем
+          </span><span class="hero__fragment fragment3">и для кого?</span></h1>
+        <h2 class="hero__subhead">Онлайн-курс развития <br />частной практики</h2>
+        <button class="button hero__button">Запистаться</button>
+      </hgroup>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Что дает курс" class="section section--type-text section--active">
+      <h2 class="section__heading">1. Что дает курс</h2>
+      <div class="section__inner">
+        <div class="section__content">
+          <p class="section__text">Ut lab ipiende nusaper ioriatis accus eium aceatis at inulparita in cus volorent ut
+            veles eaque di debis maxim raepreptaqui am derfere mporepu ditatium dolore qui cum am, id quis eum que sit
+            et laboria quis ulliquia vernati temqui aspel ius volupta sperum que eos et qui omnis aut hit ommoluptios
+            doluptaeptia poriam quodi comnima quunt omnimpo reptae cum recea volorio. As conserc hitat.</p>
+          <p class="section__text">Ferum haritatectia des dolorepudaes eiusanda dit ipsae. Et ea quam quam quae plabo.
+            Uptatiis minveni denia quis alic testio omnim que sandaep ersped elestrum rem quatiametur, il magniate
+            labore, excerore plaboresed eossed maio. Id et eum latianti animus alique dolorum evel im ut mintota tustiae
+            dolorest mos sit vel ius as arum dio. Itatur, estio quis eos aut escium rero quidem s dameni </p>
+        </div>
+        <!-- <div class="section__content"> -->
+        <img src="./images/recolored.png" alt="bubble" class="section__image">
+        <!-- </div> -->
+      </div>
+    </section>
+    <section id="section2" data-nav="Программа" class="section section--type-cards">
+      <h2 class="section__heading">2. Программа</h2>
+      <div class="section__inner">
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">1</span>
+            <span class="card__title">Модуль</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description">Вебинар</span>
+            <time class="card__timing">1,5 часа Zoom</time>
+            <h3 class="card__main">Какой я специалист? <br>Моя профессиональная идентичность</h3>
+            <span class="card__description card--snap-to-bottom">Онлайн группа практики</span>
+            <time class="card__timing card--snap-to-bottom">2-2,5 часа Zoom</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">2</span>
+            <span class="card__title">Модуль</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description">Вебинар</span>
+            <time class="card__timing">1,5 часа Zoom</time>
+            <h3 class="card__main">Что я предлагаю своим клиентам?</h3>
+            <span class="card__description card--snap-to-bottom">Онлайн группа практики</span>
+            <time class="card__timing card--snap-to-bottom">2-2,5 часа Zoom</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">3</span>
+            <span class="card__title">Модуль</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description">Вебинар</span>
+            <time class="card__timing">1,5 часа Zoom</time>
+            <h3 class="card__main">Как меня видят мои клиенты?</h3>
+            <span class="card__description card--snap-to-bottom">Онлайн группа практики</span>
+            <time class="card__timing card--snap-to-bottom">2-2,5 часа Zoom</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">4</span>
+            <span class="card__title">Модуль</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description">Вебинар</span>
+            <time class="card__timing">1,5 часа Zoom</time>
+            <h3 class="card__main">Как меня видят мои клиенты?</h3>
+            <span class="card__description card--snap-to-bottom">Онлайн группа практики</span>
+            <time class="card__timing card--snap-to-bottom">2-2,5 часа Zoom</time>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="Расписание" class="section section--type-cards section--theme-plan">
+      <h2 class="section__heading">3. Расписание</h2>
+      <div class="section__inner">
+        <div class="card section__card card--type-transparent">
+          <div class="card__header">
+            <span class="card__number">1</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description card--terse">Вебинар</span>
+            <time class="card__timing card--terse">2 февраля, 19:00</time>
+            <span class="card__description card--snap-to-bottom card--terse">Группа практики</span>
+            <time class="card__timing card--snap-to-bottom card--terse">4 февраля, 19:00</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-transparent">
+          <div class="card__header">
+            <span class="card__number">2</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description card--terse">Вебинар</span>
+            <time class="card__timing card--terse">9 февраля, 19:00</time>
+            <span class="card__description card--snap-to-bottom card--terse">Группа практики</span>
+            <time class="card__timing card--snap-to-bottom card--terse">11 февраля, 19:00</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-transparent">
+          <div class="card__header">
+            <span class="card__number">3</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description card--terse">Вебинар</span>
+            <time class="card__timing card--terse">16 февраля, 19:00</time>
+            <span class="card__description card--snap-to-bottom card--terse">Группа практики</span>
+            <time class="card__timing card--snap-to-bottom card--terse">18 февраля, 19:00</time>
+          </div>
+        </div>
+        <div class="card section__card card--type-transparent">
+          <div class="card__header">
+            <span class="card__number">4</span>
+          </div>
+          <div class="card__body">
+            <span class="card__description card--terse">Вебинар</span>
+            <time class="card__timing card--terse">23 февраля, 19:00</time>
+            <span class="card__description card--snap-to-bottom card--terse">Группа практики</span>
+            <time class="card__timing card--snap-to-bottom card--terse">25 февраля, 19:00</time>
+          </div>
+        </div>
+      </div>
+      <button class="button section__button">Запистаться</button>
+    </section>
+    <section id="section4" data-nav="Тарифы" class="section section--type-cards">
+      <h2 class="section__heading">4. Тарифы</h2>
+      <div class="section__inner">
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">1</span>
+            <span class="card__title">Минимальный</span>
+            <span class="card__pricing">4 000</span>
+          </div>
+          <ul class="card__body">
+            <li class="card__description">Только вебинары</li>
+          </ul>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">2</span>
+            <span class="card__title">Эконом</span>
+            <span class="card__pricing">12 000</span>
+          </div>
+          <ul class="card__body">
+            <li class="card__description">Вебинары</li>
+            <li class="card__description">онлайн группы практики</li>
+          </ul>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">3</span>
+            <span class="card__title">Стандарт</span>
+            <span class="card__pricing">15 000</span>
+          </div>
+          <ul class="card__body">
+            <li class="card__description">Вебинары</li>
+            <li class="card__description">онлайн группы практики</li>
+            <li class="card__description">обратная связь по домашним заданиям</li>
+          </ul>
+        </div>
+        <div class="card section__card card--type-normal">
+          <div class="card__header">
+            <span class="card__number">4</span>
+            <span class="card__title">Расширенный</span>
+            <span class="card__pricing">18 000</span>
+          </div>
+          <ul class="card__body">
+            <li class="card__description">Вебинары</li>
+            <li class="card__description">онлайн группы практики</li>
+            <li class="card__description">обратная связь по домашним заданиям</li>
+            <li class="card__description">личная консультация «Следующие шаги в развитии практики»</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="section5" data-nav="О ведущей" class="section section--type-text ">
+      <h2 class="section__heading">5. О ведущей</h2>
+      <div class="section__inner section--type-text">
+        <div class="section__content">
+          <p class="section__text">Ut lab ipiende nusaper ioriatis accus eium aceatis at inulparita in cus volorent ut
+            veles eaque di debis maxim raepreptaqui am derfere mporepu ditatium dolore qui cum am, id quis eum que sit
+            et laboria quis ulliquia vernati temqui aspel ius volupta sperum que eos et qui omnis aut hit ommoluptios
+            doluptaeptia poriam quodi comnima quunt omnimpo reptae cum recea volorio. As conserc hitat.</p>
+          <p class="section__text">Ferum haritatectia des dolorepudaes eiusanda dit ipsae. Et ea quam quam quae plabo.
+            Uptatiis minveni denia quis alic testio omnim que sandaep ersped elestrum rem quatiametur, il magniate
+            labore, excerore plaboresed eossed maio. Id et eum latianti animus alique dolorum evel im ut mintota tustiae
+            dolorest mos sit vel ius as arum dio. Itatur, estio quis eos aut escium rero quidem s dameni </p>
+        </div>
+        <!-- <div class="section__content"> -->
+        <img src="./images/to_delete.jpg" alt="Ведущая" class="section__image">
+        <!-- </div> -->
+      </div>
+      <button class="button section__button">Запистаться</button>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="copyright footer__copyright">&copy; Copyright Whatever<br>Images by <span
+        class="copyright__brand">rawpixel.com</span></p>
+  </footer>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+@import 'burger.css';
+
+.menu {
+    position: relative;
+    background-color: #f9f1e7;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 14px 24px;
+}
+
+.menu__body {
+    position: absolute;
+    right: 9999em;
+    top: 34px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #f9f1e7;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.menu--open .menu__body {
+    right: 0;
+    max-height: 100em;
+}
+
+.menu__item {
+    border-bottom: 1px solid #3a3a3a;
+    width: 100vw;
+}
+
+.menu__link {
+    text-decoration: none;
+    font-size: 2.4em;
+    line-height: 60px;
+    font-weight: 200;
+    color: #333;
+    padding: 0 44px;
+}
+
+.menu--active {
+    background-color: #e89f71;
+}
+
+.menu--active .menu__link {
+    color: #fff;
+    font-weight: 400;
+}
+
+.menu--sticky {
+    background-color: transparent;
+}
+
+.menu--open.menu--sticky {
+    background-color: #f9f1e7;
+}
+
+
+@media screen and (min-width: 760px) {
+    .menu {
+        padding: 0;
+        transition: all 0.5s ease;
+    }
+
+    .menu--sticky {
+        background-color: rgba(232, 159, 113, 0.5);
+        position: fixed;
+        top: 0;
+    }
+
+    .menu__body {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 24px 66px;
+        max-height: 40em;
+        background: transparent;
+    }
+
+    .menu--sticky .menu__body {
+        padding: 0 66px;
+    }
+
+    .menu__item {
+        width: auto;
+        border: none;
+    }
+
+    .menu__link {
+        color: #000;
+        font-weight: 700;
+        font-size: 1.8em;
+        line-height: 48px;
+        padding: 0 14px;
+    }
+
+    .menu--active .menu__link {
+        font-weight: 700;
+    }
+
+    .menu--sticky .menu__link {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .menu__item:last-child .menu__link {
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .menu__body {
+        padding: 42px 66px;
+    }
+
+    .menu__link {
+        font-size: 2em;
+        padding: 0 24px;
+    }
+}

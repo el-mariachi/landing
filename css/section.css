@@ -1,0 +1,138 @@
+@import 'card.css';
+
+.section {
+    display: flex;
+    padding: 24px 0 36px;
+    flex-direction: column;
+    filter: grayscale(1);
+    transition: all 0.8s;
+}
+
+.section--active {
+    filter: grayscale(0);
+}
+
+.section__heading {
+    font-size: 3.6em;
+    line-height: 54px;
+    font-weight: 200;
+    margin: 0 0 1em;
+    color: #3a3a3a;
+    width: 100%;
+    text-align: center;
+}
+
+.section__inner {
+    display: flex;
+    padding: 24px;
+    background-color: #fff;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section--type-text {
+    flex-direction: column;
+}
+
+.section--type-text .section__inner {
+    flex-direction: column-reverse;
+}
+
+.section--type-cards {
+    flex-direction: column;
+}
+
+.section--type-cards .section__inner {
+    padding: 0;
+}
+
+.section--theme-plan {
+    background: url(../images/plan.png) no-repeat;
+    background-size: cover;
+}
+
+.section--theme-plan .section__inner {
+    background: transparent;
+}
+
+.section__text {
+    font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    line-height: 20px;
+}
+
+.section__image {
+    width: 60%;
+    max-width: 30em;
+    display: block;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.section:nth-child(even) {
+    background-color: #f9f1e7;
+}
+
+.section:nth-child(odd) {
+    background-color: #fff;
+}
+
+.section__card {
+    margin-bottom: 24px;
+}
+
+.section__card:last-child {
+    margin: 0;
+}
+
+.section__button {
+    align-self: center;
+    margin: 48px auto 0;
+}
+
+@media screen and (min-width: 760px) {
+    .section {
+        padding: 66px;
+    }
+
+    .section--type-text .section__inner {
+        flex-direction: row;
+    }
+
+    .section__heading {
+        text-align: left;
+    }
+
+    .section__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .section__content {
+        width: 60%;
+    }
+
+    .section__image {
+        width: 30%;
+        margin-left: 10%;
+    }
+
+    .section__card {
+        margin-bottom: 32px;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+    .section__card:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .section__text {
+        font-size: 2em;
+        line-height: 27px;
+    }
+}

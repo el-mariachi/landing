@@ -1,0 +1,19 @@
+@import 'copyright.css';
+
+.footer {
+    border-top: 1px solid #d8d8d8;
+    margin: 24px;
+    display: flex;
+}
+
+.footer__copyright {
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 760px) {
+    .footer {
+        margin: 24px 66px;
+    }
+}

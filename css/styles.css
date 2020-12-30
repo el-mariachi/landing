@@ -1,0 +1,13 @@
+@import 'header.css';
+/* @import 'content.css'; */
+@import 'section.css';
+@import 'hero.css';
+@import 'button.css';
+@import 'footer.css';
+
+.page {
+    margin: 0;
+    font-size: 62.5%;
+    font-weight: 400;
+    font-family: 'Fira Sans';
+}
