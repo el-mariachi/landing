@@ -44,6 +44,12 @@
     padding: 0 44px;
 }
 
+.menu--sticky {
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
 .menu--active {
     background-color: #e89f71;
 }
@@ -65,7 +71,6 @@
 @media screen and (min-width: 760px) {
     .menu {
         padding: 0;
-        transition: all 0.5s ease;
     }
 
     .menu--sticky {
@@ -78,7 +83,7 @@
         position: static;
         flex-direction: row;
         justify-content: flex-end;
-        padding: 24px 66px;
+        padding: 24px 52px 24px 66px;
         max-height: 40em;
         background: transparent;
     }
@@ -90,6 +95,11 @@
     .menu__item {
         width: auto;
         border: none;
+        border-bottom: 4px solid transparent;
+    }
+
+    .menu__item:hover {
+        border-bottom: 4px solid #e89f71;
     }
 
     .menu__link {
@@ -108,15 +118,11 @@
         color: #fff;
         font-weight: 400;
     }
-
-    .menu__item:last-child .menu__link {
-        padding-right: 0;
-    }
 }
 
 @media screen and (min-width: 1020px) {
     .menu__body {
-        padding: 42px 66px;
+        padding: 42px 42px 42px 66px;
     }
 
     .menu__link {

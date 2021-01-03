@@ -1,9 +1,13 @@
 @import 'header.css';
-/* @import 'content.css'; */
 @import 'section.css';
 @import 'hero.css';
 @import 'button.css';
+@import 'goup.css';
 @import 'footer.css';
+
+html {
+    /* scroll-behavior: smooth; */
+}
 
 .page {
     margin: 0;
