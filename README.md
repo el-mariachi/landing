@@ -1,13 +1,13 @@
 # Landing Page Project
 
-## Table of Contents
+<!-- ## Table of Contents -->
 
-* [Instructions](#instructions)
+<!-- * [Instructions](#instructions) -->
 
-## Instructions
+<!-- ## Instructions -->
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+This project features a custom landing page that represents an online workshop.
+The top navigation is built dynamically based on the structure of the main section.
+The page has a header section and five content sections. An empty test section is being
+added programmatically for testing purposes.
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
