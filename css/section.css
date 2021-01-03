@@ -5,7 +5,7 @@
     padding: 24px 0 36px;
     flex-direction: column;
     filter: grayscale(1);
-    transition: all 0.8s;
+    transition: filter 0.8s;
 }
 
 .section--active {
@@ -66,7 +66,7 @@
     max-width: 30em;
     display: block;
     margin: 0 auto;
-    height: fit-content;
+    align-self: flex-start;
 }
 
 .section:nth-child(even) {

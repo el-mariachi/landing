@@ -1,0 +1,62 @@
+.goup {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    box-sizing: border-box;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #fcf8f3;
+    box-shadow: 0px 4px 24px 0px rgba(102,102,102,0.2);
+}
+
+.goup__arrow {
+    width: 3px;
+    height: 36px;
+    background-color: #e89f71;
+    position: relative;
+    left: 50%;
+    top: 16%;
+}
+
+.goup:hover {
+    background-color: #e89f71;
+}
+
+.goup:hover .goup__arrow {
+    background-color: #fff;
+}
+
+.goup__arrow::before,
+.goup__arrow::after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 21px;
+    background-color: inherit;
+    position: absolute;
+    transform-origin: 50% 0%;
+}
+
+.goup__arrow::before {
+    transform: rotate(45deg) translateX(1px);
+}
+
+.goup__arrow::after {
+    transform: rotate(-45deg) translateX(-1px);
+}
+
+@media screen and (min-width: 760px) {
+    .goup {
+        width: 80px;
+        height: 80px;
+        right: 66px;
+        bottom: 66px;
+    }
+
+    .goup__arrow {
+        height: 46px;
+        top: 20%;
+    }
+    
+}
