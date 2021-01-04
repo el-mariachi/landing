@@ -1,13 +1,3 @@
-/**
- * 
- * and highlights section in viewport upon scrolling.
- * 
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
 (function (global) {
 
     /**
@@ -160,16 +150,3 @@
         window.scrollTo(0, 0);
     });
 })(window);
-
-
-// test section
-
-const aSection = document.createElement('section');
-aSection.id = 'section6';
-aSection.className = 'section';
-aSection.dataset.nav = 'TestItem';
-const testHeader = document.createElement('h2');
-testHeader.className = 'section__heading';
-testHeader.textContent = 'Test Section';
-aSection.appendChild(testHeader);
-document.querySelector('main').appendChild(aSection);
